@@ -10,13 +10,14 @@ namespace ReverseASentence{
             int wordStart = 0;
             int wordEnd = 0;
             for(int i = 0; i < N; i++){
-                if(i == 0 || revStrtTemp[i - 1] == ' '){
-                    wordStart = i;
-                }
+                // if(i == 0 || revStrtTemp[i - 1] == ' '){
+                //     wordStart = i;
+                // }
                 if(revStrtTemp[i] == ' '){
                     wordEnd = i;
                     string w = reverse(revStrtTemp, wordStart, wordEnd - 1);
                     sb.Append(w + " ");
+                    wordStart = wordEnd + 1;
                 }
                 if(i == N-1){
                     wordEnd = i;
