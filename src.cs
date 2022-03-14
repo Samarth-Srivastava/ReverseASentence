@@ -13,12 +13,12 @@ namespace ReverseASentence{
                 if(i == 0 || revStrtTemp[i - 1] == ' '){
                     wordStart = i;
                 }
-                else if(revStrtTemp[i] == ' '){
+                if(revStrtTemp[i] == ' '){
                     wordEnd = i;
                     string w = reverse(revStrtTemp, wordStart, wordEnd - 1);
                     sb.Append(w + " ");
                 }
-                else if(i == N-1){
+                if(i == N-1){
                     wordEnd = i;
                     string w = reverse(revStrtTemp, wordStart, wordEnd);
                     sb.Append(w + " ");
